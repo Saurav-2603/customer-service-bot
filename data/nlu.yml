@@ -1,0 +1,131 @@
+version: "3.0"
+nlu:
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?    
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+- intent: accept
+  examples: |
+    - yes
+    - right
+    - ok
+    - okay
+    - sure
+    - fine
+    - it's ok
+    - it is okay
+    - of cause
+    - ofcause
+- intent: reject
+  examples: |
+    - no
+    - don't
+    - dont
+    - do not
+    - please no
+    - no please
+    - never
+    - don't do
+- intent: begin_lead
+  examples: |
+    - begin lead
+    - Web Application Development
+    - Mobile App Development
+    - Chatbot Development
+    - Frontend Development
+    - Progessive Web App Development
+    - AI & Machine Learning
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: Name
+  examples: |
+    - [saurav kumar](name)
+    - [adam](name)
+    - [harsha](name)
+    - [bruce](name)
+    - [alicia](name)
+    - [marshall](name)
+    - [rahul](name)
+    - [sapna](name)
+    - [shreya](name)
+    - [shubham](name)
+
+- intent: Email
+  examples: |
+    - [saurav@gmail.com](email)
+    - [rahul@gmail.com](email)
+    - [lord123@gmail.com](email)
+
+- intent: Phone
+  examples: |
+    - [1234567890](phone)
+    - [9999999999](phone)
+    - [8888888888](phone)
+
+- intent: URL
+  examples: |
+    - [www.bot.com](url)
+    - [www.wiki.com](url)
+    - [www.towardsdatascience.com](url)
+
+- intent: Requirements
+  examples: |
+    - [dynamic web page](requirement)
+    - [simple web page](requirement)
+    - [only frontend] (requirement)
+
+- intent: Mockup
+  examples: |
+    - [Basic Requirements](mockup)
+    - [Designs](mockup)
+    - [RFP or any Document](mockup)
+    - [None](mockup)
+
+- intent: Timeline
+  examples: |
+    - [Immediately](timeline)
+    - [within a month](timeline)
+    - [within the next 3 months](timeline)
+    - [after 3 months](timeline)
+
+- intent: Budget
+  examples: |
+    - [Below $5000](budget)
+    - [$5000 - $15000](budget)
+    - [$15000 - $25000](budget)
+    - [$25000 and above](budget)
+
