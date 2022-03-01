@@ -1,48 +1,6 @@
 version: "3.0"
 stories:
-- story: path begin conversation
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-
-# - story: path combined begin with url
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - action: utter_menu
-#   - intent: begin_lead
-#   - action: utter_lead_q1
-#   - action: utter_ask_requirement
-#   - intent: requirements
-#   # - action: lead_form_p1
-#   # - active_loop: lead_form_p1
-#   - intent: accept
-#   # - action: lead_form_p2
-#   # - action: lead_form_p3
-#   - action: utter_lead_q3
-#   - action: utter_lead_q4
-#   - action: utter_lead_q5
-#   - intent: goodbye
-#   - action: utter_goodbye
-
-# - story: path combined begin without url
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - action: utter_menu
-#   - intent: begin_lead
-#   - action: utter_lead_q1
-#   # - action: lead_form_p1
-#   - intent: reject
-#   # - action: lead_form_p3
-#   - action: utter_lead_q3
-#   - action: utter_lead_q4
-#   - action: utter_lead_q5
-#   - intent: goodbye
-#   - action: utter_goodbye
-
-- story: interactive_story_1
+- story: interactive_story_1 with url
   steps:
   - intent: greet
   - action: utter_greet
@@ -69,6 +27,71 @@ stories:
     - url: www.bot.com
   - slot_was_set:
     - url: www.bot.com
+  - action: utter_ask_timeline
+  - intent: Timeline
+    entities:
+    - timeline: within a month
+  - slot_was_set:
+    - timeline: within a month
+  - action: utter_ask_budget
+  - intent: Budget
+    entities:
+    - budget: $5000
+    - budget: $15000
+  - slot_was_set:
+    - budget: $15000
+  - action: utter_ask_name
+  - intent: Name
+    entities:
+    - name: adam
+  - slot_was_set:
+    - name: adam
+  - action: utter_ask_email
+  - intent: Email
+    entities:
+    - email: lord123@gmail.com
+  - slot_was_set:
+    - email: lord123@gmail.com
+  - action: utter_ask_phone
+  - intent: Phone
+    entities:
+    - phone: '1234567890'
+  - slot_was_set:
+    - phone: '1234567890'
+  - action: utter_lead_q2
+  - action: utter_lead_q3
+  - action: utter_lead_q4
+  - action: utter_lead_q5
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2 no url
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: begin_lead
+  - action: utter_lead_q1
+  - action: utter_ask_requirement
+  - intent: Requirements
+    entities:
+    - requirement: dynamic web page
+  - slot_was_set:
+    - requirement: dynamic web page
+  - action: utter_ask_mockup
+  - intent: Mockup
+    entities:
+    - mockup: Basic Requirements
+  - slot_was_set:
+    - mockup: Basic Requirements
+  - action: utter_urlAvailable
+  - intent: reject
+  # - action: utter_ask_url
+  # - intent: URL
+  #   entities:
+  #   - url: www.bot.com
+  # - slot_was_set:
+  #   - url: www.bot.com
   - action: utter_ask_timeline
   - intent: Timeline
     entities:
