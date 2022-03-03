@@ -1,5 +1,47 @@
 version: "3.0"
 stories:
+- story: path begin conversation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+
+# - story: path combined begin with url
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_menu
+#   - intent: begin_lead
+#   - action: utter_lead_q1
+#   - action: utter_ask_requirement
+#   - intent: requirements
+#   # - action: lead_form_p1
+#   # - active_loop: lead_form_p1
+#   - intent: accept
+#   # - action: lead_form_p2
+#   # - action: lead_form_p3
+#   - action: utter_lead_q3
+#   - action: utter_lead_q4
+#   - action: utter_lead_q5
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: path combined begin without url
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_menu
+#   - intent: begin_lead
+#   - action: utter_lead_q1
+#   # - action: lead_form_p1
+#   - intent: reject
+#   # - action: lead_form_p3
+#   - action: utter_lead_q3
+#   - action: utter_lead_q4
+#   - action: utter_lead_q5
+#   - intent: goodbye
+#   - action: utter_goodbye
+
 - story: interactive_story_1 with url
   steps:
   - intent: greet
