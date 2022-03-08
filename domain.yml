@@ -371,7 +371,6 @@ actions:
   - utter_goodbye
   - utter_iamabot
   - action_submit
-  - 
   
 entities:
   - requirement
